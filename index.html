@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        body {
+            width: 800px;
+            margin: auto;
+            padding: 2em
+        }
+
+        #logo .letters .fg {
+            fill: #aecc4e;
+        }
+        #logo .letters .bg {
+            fill: #0d734e;
+        }
+        #logo .background {
+            fill: #000;
+        }
+        #logo #pattern-overlay {
+            fill: #526169;
+        }
+
+        #logo.pallete-1 .letters .fg {
+            fill: #64c3d1;
+        }
+        #logo.pallete-1 .letters .bg {
+            fill: #123d6d;
+        }
+        #logo.pallete-1 .background {
+            fill: #9b196e;
+        }
+        #logo.pallete-1 #pattern-overlay {
+            fill: #f3e831;
+        }
+
+        #logo.pallete-2 .letters .fg {
+            fill: #613c46;
+        }
+        #logo.pallete-2 .letters .bg {
+            fill: #231e26;
+        }
+        #logo.pallete-2 .background {
+            fill: #f6d597;
+        }
+        #logo.pallete-2 #pattern-overlay {
+            fill: #a6455e;
+        }
+
+        #logo.pallete-3 .letters .fg {
+            fill: #5f989a;
+        }
+        #logo.pallete-3 .letters .bg {
+            fill: #648986;
+        }
+        #logo.pallete-3 .background {
+            fill: #494041;
+        }
+        #logo.pallete-3 #pattern-overlay {
+            fill: #d97144;
+        }
+
+        #logo.pallete-4 .letters .fg {
+            fill: #499379;
+        }
+        #logo.pallete-4 .letters .bg {
+            fill: #286665;
+        }
+        #logo.pallete-4 .background {
+            fill: #f88549;
+        }
+        #logo.pallete-4 #pattern-overlay {
+            fill: #f6ed7d;
+        }
+
+        #logo.pallete-5 .letters .fg {
+            fill: #f6c63c;
+        }
+        #logo.pallete-5 .letters .bg {
+            fill: #dcd691;
+        }
+        #logo.pallete-5 .background {
+            fill: #cc4144;
+        }
+        #logo.pallete-5 #pattern-overlay {
+            fill: #50ad98;
+        }
+
+        #logo.pallete-6 .letters .fg {
+            fill: #f4b049;
+        }
+        #logo.pallete-6 .letters .bg {
+            fill: #f07f47;
+        }
+        #logo.pallete-6 .background {
+            fill: #76ae92;
+        }
+        #logo.pallete-6 #pattern-overlay {
+            fill: #353030;
+        }
+
+        #logo.pallete-6 .letters .fg {
+            fill: #25654d;
+        }
+        #logo.pallete-6 .letters .bg {
+            fill: #17291b;
+        }
+        #logo.pallete-6 .background {
+            fill: #76b2b5;
+        }
+        #logo.pallete-6 #pattern-overlay {
+            fill: #fefcf9;
+        }
+
+        #logo.pallete-7 .letters .fg {
+            fill: #091e2c;
+        }
+        #logo.pallete-7 .letters .bg {
+            fill: #0e131d;
+        }
+        #logo.pallete-7 .background {
+            fill: #4c8d5e;
+        }
+        #logo.pallete-7 #pattern-overlay {
+            fill: #1a313e;
+        }
+    </style>
+</head>
+<body>
+    <svg id="logo" viewBox="0 0 42 38">
+        <defs>
+            <pattern id="pattern-overlay" viewBox="0,0,10,10" width="1" height="1" patternUnits="userSpaceOnUse">
+                <path id="dots" d="M0 0 h1 v1 h-1z M0 9 h1 v1 h-1z M9 0 h1 v1 h-1z M9 9 h1 v1 h-1z" />
+
+                <path id="pluses" d="M0 0 h3 v1 h-2 v2 h-1z M0 10 h3 v-1 h-2 v-2 h-1z M10 0 v3 h-1 v-2 h-2 v-1z M10 10 h-3 v-1 h2 v-2 h1z" visibility="hidden" />
+
+                <rect id="circles" x="0" y="0" width="10" height="10" mask="url(#mask-round)" visibility="hidden" />
+
+                <rect id="diamonds" x="0" y="0" width="10" height="10" mask="url(#mask-diamonds)" visibility="hidden" />
+
+                <path id="triangles" d="M0 0 h10 v10" visibility="hidden" />
+            </pattern>
+
+            <mask id="mask-round">
+                <rect x="0" y="0" width="10" height="10" fill="white" />
+                <circle cx="5" cy="5" r="5" fill="black" />
+            </mask>
+
+            <mask id="mask-diamonds">
+                <rect x="0" y="0" width="10" height="10" fill="white" />
+                <circle cx="5" cy="5" r="6" fill="black" />
+            </mask>
+        </defs>
+
+        <rect class="background" x="0" y="0" width="100%" height="100%" />
+
+        <g class="letters">
+            <g id="d" class="character" transform="translate(4, 4)">
+                <path d="M2 2 h1 v9 h-1z M7 2 h1 v9 h-1z M6 11 h1 v1 h-1z M5 12 h1 v1 h-1z" class="bg"/>
+                <path d="M0 0 h6 v1 h1 v10 h-1 v1 h-1 v1 h-5z M2 2 v9 h3 v-9z" class="fg"/>
+            </g>
+
+            <g id="i" class="character" transform="translate(16, 4)">
+                <path d="M2 0 h1 v13 h-1z" class="bg"/>
+                <path d="M0 0 h2 v13 h-2z" class="fg"/>
+            </g>
+
+            <g id="g" class="character" transform="translate(23, 4)">
+                <path d="M2 2 h1 v9 h-1z M7 2 h1 v3 h-1z M7 8 h1 v5 h-1z M4 12 h1 v1 h-1z" class="bg"/>
+                <path d="M0 1 h1 v-1 h5 v1 h1 v4 h-2 v-3 h-3 v9 h3 v-3 h2 v5 h-2 v-1 h-1 v1 h-3 v-1 h-1z" class="fg"/>
+            </g>
+
+            <g id="i" class="character" transform="translate(35, 4)">
+                <path d="M2 0 h1 v13 h-1z" class="bg"/>
+                <path d="M0 0 h2 v13 h-2z" class="fg"/>
+            </g>
+
+            <g id="d" class="character" transform="translate(4, 21)">
+                <path d="M2 2 h1 v9 h-1z M7 2 h1 v9 h-1z M6 11 h1 v1 h-1z M5 12 h1 v1 h-1z" class="bg"/>
+                <path d="M0 0 h6 v1 h1 v10 h-1 v1 h-1 v1 h-5z M2 2 v9 h3 v-9z" class="fg"/>
+            </g>
+
+            <g id="e" class="character" transform="translate(15, 21)">
+                <path d="M0 0 h6 v2 h-4 v3 h3 v2 h-3 v4 h4 v2 h-6z" class="fg"/>
+                <path d="M6 0 h1 v2 h-1z M2 2 h1 v3 h-1z M5 5 h1 v2 h-1z M2 7 h1 v4 h-1z M6 11 h1 v2 h-1z" class="bg"/>
+            </g>
+
+            <g id="v" class="character" transform="translate(26, 21)">
+                <path d="M0 0 h2 v11 h2 v-1 h1 v-10 h2 v11 h-1 v1 h-1 v1 h-5z" class="fg"/>
+                <path d="M2 0 h1 v11 h-1z M7 0 h1 v11 h-1z M6 11 h1 v1 h-1z M5 12 h1 v1 h-1z" class="bg"/>
+            </g>
+            <g id="dot" class="character" transform="translate(37, 21)">
+                <path d="M0 11 h1 v2 h-1z" class="bg"/>
+            </g>
+        </g>
+
+        <rect class="overlay" x="0" y="0" width="100%" height="100%" fill="url(#pattern-overlay)"/>
+    </svg>
+    <script>
+        function randInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        let logoElement = document.querySelector("#logo");
+        let patternElements = logoElement.querySelectorAll("#pattern-overlay > *");
+
+        // set a random pallete
+        logoElement.classList.add("pallete-" + randInt(0, 7));
+
+        // set a random pattern
+        patternElements.forEach(function(node) {
+            node.setAttribute("visibility", "hidden");
+        });
+
+        patternElements.item(randInt(0, patternElements.length -1)).setAttribute("visibility", "visible")
+    </script>
+
+    <button onclick="location.reload()">Clicky</button>
+</body>
+</html>
